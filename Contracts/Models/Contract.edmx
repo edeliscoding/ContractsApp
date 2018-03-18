@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ContractsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Contract">
+          <Key>
+            <PropertyRef Name="ContractId" />
+          </Key>
+          <Property Name="ContractId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DelegateEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContractStartDate" Type="date" />
+          <Property Name="ContractEndDate" Type="date" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyState" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyZip" Type="nvarchar" MaxLength="10" />
+          <Property Name="CompanyEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyFax" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyMethodOfContact" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProviderFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProviderLastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProviderNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProviderAmount" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProviderTypeOfService" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProviderPaymentTerms" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ContractsModelStoreContainer">
+          <EntitySet Name="Contract" EntityType="Self.Contract" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ContractsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Contract">
+          <Key>
+            <PropertyRef Name="ContractId" />
+          </Key>
+          <Property Name="ContractId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DelegateEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContractStartDate" Type="DateTime" Precision="0" />
+          <Property Name="ContractEndDate" Type="DateTime" Precision="0" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyState" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyZip" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyFax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyMethodOfContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderTypeOfService" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderPaymentTerms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ContractsDb" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contracts" EntityType="Self.Contract" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ContractsModelStoreContainer" CdmEntityContainer="ContractsDb">
+          <EntitySetMapping Name="Contracts">
+            <EntityTypeMapping TypeName="ContractsModel.Contract">
+              <MappingFragment StoreEntitySet="Contract">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+                <ScalarProperty Name="DelegateEmail" ColumnName="DelegateEmail" />
+                <ScalarProperty Name="ContractStartDate" ColumnName="ContractStartDate" />
+                <ScalarProperty Name="ContractEndDate" ColumnName="ContractEndDate" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="CompanyCity" ColumnName="CompanyCity" />
+                <ScalarProperty Name="CompanyState" ColumnName="CompanyState" />
+                <ScalarProperty Name="CompanyZip" ColumnName="CompanyZip" />
+                <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
+                <ScalarProperty Name="CompanyFax" ColumnName="CompanyFax" />
+                <ScalarProperty Name="CompanyMethodOfContact" ColumnName="CompanyMethodOfContact" />
+                <ScalarProperty Name="ProviderFirstName" ColumnName="ProviderFirstName" />
+                <ScalarProperty Name="ProviderLastName" ColumnName="ProviderLastName" />
+                <ScalarProperty Name="ProviderNumber" ColumnName="ProviderNumber" />
+                <ScalarProperty Name="ProviderAmount" ColumnName="ProviderAmount" />
+                <ScalarProperty Name="ProviderTypeOfService" ColumnName="ProviderTypeOfService" />
+                <ScalarProperty Name="ProviderPaymentTerms" ColumnName="ProviderPaymentTerms" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

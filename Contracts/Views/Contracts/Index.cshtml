@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Contracts.Models.Contract>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DelegateEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyZip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyFax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyMethodOfContact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderTypeOfService)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProviderPaymentTerms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DelegateEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyZip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyFax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyMethodOfContact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProviderFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProviderLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProviderNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProviderAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProviderTypeOfService)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProviderPaymentTerms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ContractId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ContractId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ContractId })
+        </td>
+    </tr>
+}
+
+</table>

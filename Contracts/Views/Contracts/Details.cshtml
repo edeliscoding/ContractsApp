@@ -1,0 +1,154 @@
+﻿@model Contracts.Models.Contract
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contract</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DelegateEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DelegateEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractEndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyFax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyFax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyMethodOfContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyMethodOfContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProviderFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProviderLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProviderNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProviderAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderTypeOfService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProviderTypeOfService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderPaymentTerms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProviderPaymentTerms)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContractId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
